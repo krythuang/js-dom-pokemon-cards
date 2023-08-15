@@ -20,11 +20,17 @@ function main()
 				<img width="250" class="card--img" src="${image}"/>
 			<div class="card--text">
 				<div>HP: ${hp}</div>
+				</br>
 				<div>ATTACK: ${attack}</div>
+				</br>
 				<div>DEFENSE: ${defense}</div>
+				</br>
 				<div>SPECIAL-ATTACK: ${specialAttack}</div>
+				</br>
 				<div>SPECIAL-DEFENSE: ${specialDefense}</div>
+				</br>
 				<div>SPEED: ${speed}</div>
+				</br>
 			</div>
 		</div>`
 		container.innerHTML += htmlPart
