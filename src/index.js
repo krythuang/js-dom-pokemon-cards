@@ -17,7 +17,7 @@ function main()
 		let htmlPart =
 		`<div class="card">
 			<h2 class="card--title">${name}</h2>
-				<img width="250" class="card--img" src="${image}"/>
+				<img width="256" class="card--img" src="${image}"/>
 				</br>
 			<div class="card--text">
 				<div>HP: ${hp}</div>
