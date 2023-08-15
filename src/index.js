@@ -1,6 +1,34 @@
+let container = document.querySelector('.cards')
 
-console.log(data);
+function main()
+{
+	for (let i = 0; i < data.length; i++)
+	{
+		let nameTemp = data[i].name
+		let name = nameTemp.slice(0,1).toUpperCase() + nameTemp.slice(1)
+		let hp = data[i].stats[0].base_stat
+		let attack = data[i].stats[1].base_stat
+		let defense = data[i].stats[2].base_stat
+		let specialAttack = data[i].stats[3].base_stat
+		let specialDefense = data[i].stats[4].base_stat
+		let speed = data[i].stats[5].base_stat
+		let image = data[i].sprites.other["official-artwork"].front_default
 
-//You can start simple and just render a single 
-//pokemon card from the first element
-console.log(data[0]);
+		let htmlPart =
+		`<div class="card">
+			<h2 class="card--title">${name}</h2>
+				<img width="250" class="card--img" src="${image}"/>
+			<div class="card--text">
+				<div>HP: ${hp}</div>
+				<div>ATTACK: ${attack}</div>
+				<div>DEFENSE: ${defense}</div>
+				<div>SPECIAL-ATTACK: ${specialAttack}</div>
+				<div>SPECIAL-DEFENSE: ${specialDefense}</div>
+				<div>SPEED: ${speed}</div>
+			</div>
+		</div>`
+		container.innerHTML += htmlPart
+	}
+}
+
+main()
